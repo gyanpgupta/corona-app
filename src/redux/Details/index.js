@@ -1,5 +1,6 @@
 import Details from "../../components/Details";
 import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
 import { fetchCoronaCasesSummaryRequest } from "./action";
 
 const mapStateToProps = state => ({
@@ -10,4 +11,4 @@ const mapDispatchToProps = {
   fetchCoronaCasesSummaryRequest
 };
 
-export default connect(mapStateToProps,mapDispatchToProps)(Details);
+export default withRouter(connect(mapStateToProps,mapDispatchToProps)(Details));

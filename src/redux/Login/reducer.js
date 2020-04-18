@@ -8,7 +8,6 @@ const initialState = {
 export const auth = (state = initialState, action) => {
   switch (action.type) {
     case ON_AUTH_SUCCESS:
-      debugger
       return {
         ...state,
         ...action.payload,

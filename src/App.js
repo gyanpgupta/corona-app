@@ -1,9 +1,9 @@
 import React from "react";
-import { Layout } from 'antd';
+import { Layout } from "antd";
 import "./App.css";
 import Routes from "./routes";
 
-const { Header, Footer, Sider, Content } = Layout;
+const { Header, Footer, Content } = Layout;
 
 function App() {
   return (
