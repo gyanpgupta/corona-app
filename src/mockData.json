@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Gyan Gupta",
+      "email": "guptagyan@mailinator.com",
+      "password": "12345"
+    },
+    {
+      "id": 2,
+      "name": "Test User",
+      "email": "test@mailinator.com",
+      "password": "12345"
+    },
+    {
+      "id": 3,
+      "name": "Test User1",
+      "email": "test1@mailinator.com",
+      "password": "12345"
+    }
+  ]
+}
