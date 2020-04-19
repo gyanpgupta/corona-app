@@ -1,12 +1,12 @@
 import { combineReducers, createStore, applyMiddleware } from "redux";
 import createSagaMiddleware from "redux-saga";
-import { details } from "./Details/reducer";
+import { dashboard } from "./Dashboard/reducer";
 import { auth } from "./Login/reducer";
 import sagaWatcher from "./sagaWatcher";
 
 const reducers = combineReducers({
   auth,
-  details,
+  dashboard,
 });
 
 const sagaMiddleware = createSagaMiddleware();
