@@ -1,4 +1,8 @@
-import { ON_AUTH_SUCCESS, ON_AUTH_FAILURE } from "./action";
+import {
+  ON_AUTH_SUCCESS,
+  ON_AUTH_FAILURE,
+  ON_AUTH_LOGOUT_SUCCESS,
+} from "./action";
 
 const initialState = {
   info: JSON.parse(localStorage.getItem("auth")),
@@ -16,6 +20,12 @@ export const auth = (state = initialState, action) => {
     case ON_AUTH_FAILURE:
       return {
         ...state,
+        ...action.payload,
+        isLoggedIn: false,
+      };
+    case ON_AUTH_LOGOUT_SUCCESS:
+      return {
+        ...initialState,
         ...action.payload,
         isLoggedIn: false,
       };

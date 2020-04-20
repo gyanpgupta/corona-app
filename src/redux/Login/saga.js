@@ -1,5 +1,10 @@
 import { put } from "redux-saga/effects";
-import { onAuthSuccess, onAuthFailure } from "./action";
+import {
+  onAuthSuccess,
+  onAuthFailure,
+  onAuthLogoutSuccess,
+  onAuthLogoutFailure,
+} from "./action";
 import mockData from "../../mockData.json";
 
 export function* onAuthRequestSaga(action) {
@@ -18,5 +23,16 @@ export function* onAuthRequestSaga(action) {
   } catch (error) {
     console.log("Error...", error);
     yield put(onAuthFailure(error));
+  }
+}
+
+export function* onAuthLogoutRequestSaga(action) {
+  try {
+    localStorage.clear();
+    window.location.assign("/login");
+    yield put(onAuthLogoutSuccess({}));
+  } catch (error) {
+    console.log("Error...", error);
+    yield put(onAuthLogoutFailure(error));
   }
 }

@@ -3,8 +3,7 @@ import { PageHeader, Button } from "antd";
 
 export default class PageTitle extends React.Component {
   handleLogout = () => {
-    localStorage.clear();
-    this.props.history.push("/login");
+    this.props.onAuthLogoutRequest();
   };
 
   render() {

@@ -1,7 +1,7 @@
 import React from "react";
 import { Table } from "antd";
 import Summary from "../Shared/Summary";
-import PageTitle from "../Shared/PageTitle";
+import PageTitle from "../../redux/Shared/PageTitle";
 import { columns, getSortedCountriesData } from "./utility";
 
 export default class Dashboard extends React.Component {
