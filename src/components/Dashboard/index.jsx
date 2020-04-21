@@ -33,6 +33,8 @@ export default class Dashboard extends React.Component {
             <br />
             <Table
               columns={columns}
+              bordered
+              expandable
               dataSource={getSortedCountriesData(summaryDetails.Countries)}
             />
           </Col>

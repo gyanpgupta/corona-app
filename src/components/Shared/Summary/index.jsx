@@ -14,7 +14,6 @@ export default function Summary({ globalSummary = {} }) {
           />
         </Col>
       ))}
-      <Col span={6} />
     </Row>
   );
 }
