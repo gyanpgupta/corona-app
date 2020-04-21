@@ -3,3 +3,22 @@
 .site-page-header {
   border: 1px solid rgb(235, 237, 240);
 }
+
+.ant-page-header-compact .ant-page-header-heading {
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 767px) {
+  .ant-statistic-title {
+    margin-bottom: 2px;
+    font-size: 10px;
+  }
+
+  .ant-statistic-content {
+    font-size: 11px;
+  }
+
+  .ant-page-header {
+    padding: 10px 15px;
+  }
+}

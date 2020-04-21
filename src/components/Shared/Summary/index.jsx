@@ -4,7 +4,7 @@ import { getMappedColors } from "./utility";
 
 export default function Summary({ globalSummary = {} }) {
   return (
-    <Row gutter={16}>
+    <Row>
       {Object.keys(globalSummary).map((key, i) => (
         <Col key={i} span={4}>
           <Statistic
@@ -14,6 +14,7 @@ export default function Summary({ globalSummary = {} }) {
           />
         </Col>
       ))}
+      <Col span={6} />
     </Row>
   );
 }

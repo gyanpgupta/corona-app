@@ -1,5 +1,5 @@
 import React from "react";
-import { Table } from "antd";
+import { Table, Row, Col } from "antd";
 import Summary from "../Shared/Summary";
 import PageTitle from "../../redux/Shared/PageTitle";
 import { columns, getSortedCountriesData } from "./utility";
@@ -23,10 +23,21 @@ export default class Dashboard extends React.Component {
 
     return (
       <>
-        <PageTitle {...this.props} />
-        <Summary globalSummary={summaryDetails.Global} />
-        <br />
-        <Table columns={columns} dataSource={getSortedCountriesData(summaryDetails.Countries)} />
+        <Row>
+          <PageTitle {...this.props} />
+        </Row>
+        <Row>
+          <Col span={2} />
+          <Col span={20}>
+            <Summary globalSummary={summaryDetails.Global} />
+            <br />
+            <Table
+              columns={columns}
+              dataSource={getSortedCountriesData(summaryDetails.Countries)}
+            />
+          </Col>
+          <Col span={2} />
+        </Row>
       </>
     );
   }

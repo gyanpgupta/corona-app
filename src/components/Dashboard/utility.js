@@ -51,14 +51,6 @@ export const columns = [
     sorter: (a, b) => a.TotalRecovered - b.TotalRecovered,
     sortDirections: ["descend", "ascend"],
   },
-  {
-    title: "Date",
-    dataIndex: "Date",
-    key: "date",
-    render: (date) => <a>{new Date(date).toLocaleDateString()}</a>,
-    sorter: (a, b) => new Date(a.Date) - new Date(b.Date),
-    sortDirections: ["descend", "ascend"],
-  },
 ];
 
 export const getSortedCountriesData = (data = []) =>
