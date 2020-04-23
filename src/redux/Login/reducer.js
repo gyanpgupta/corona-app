@@ -6,7 +6,7 @@ import {
 
 const initialState = {
   info: JSON.parse(localStorage.getItem("auth")),
-  isLoggedIn: !!localStorage.getItem("auth"),
+  isLoggedIn: Boolean(localStorage.getItem("auth")),
 };
 
 export const auth = (state = initialState, action) => {

@@ -4,7 +4,7 @@ import { getMappedColors } from "./utility";
 
 export default function Summary({ globalSummary = {} }) {
   return (
-    <Row>
+    <Row className="col-flex-mobile">
       {Object.keys(globalSummary).map((key, i) => (
         <Col key={i} span={4}>
           <Statistic

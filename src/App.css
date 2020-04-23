@@ -9,16 +9,12 @@
 }
 
 @media only screen and (max-width: 767px) {
-  .ant-statistic-title {
-    margin-bottom: 2px;
-    font-size: 10px;
-  }
-
-  .ant-statistic-content {
-    font-size: 11px;
-  }
-
   .ant-page-header {
     padding: 10px 15px;
+    width: -webkit-fill-available;
+  }
+
+  .col-flex-mobile {
+    flex-flow: column wrap;
   }
 }

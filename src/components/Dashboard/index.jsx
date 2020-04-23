@@ -35,6 +35,7 @@ export default class Dashboard extends React.Component {
               columns={columns}
               bordered
               expandable
+              scroll={{ x: 240 }}
               dataSource={getSortedCountriesData(summaryDetails.Countries)}
             />
           </Col>
